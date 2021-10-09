@@ -25,7 +25,7 @@ export const Solar = () => {
     return (
         <div>
            {
-            data.map( city => <CityCard /> )
+            data.map( city => <CityCard data={city} /> )
            }
 
            
