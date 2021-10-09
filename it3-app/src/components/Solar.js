@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { apiData } from '../apiData';
-import { CityCard } from './CityCard';
+import {Link} from 'react-router-dom';
+
 
 export const Solar = () => {
 
@@ -11,24 +12,34 @@ export const Solar = () => {
     useEffect(() => {
 
         let request = `${baseUrl}solar/data_query/v1.json?api_key=${key}&lat=40&lon=-105&radius=50&all=1`;
-        console.log(request)
         fetch(request)
             .then(res => res.json())
             .then(response => {
                 let {outputs} = response;
                 let {all_stations} = outputs;
-                console.log(all_stations)
                 setData(all_stations);
             });
     }, [key, baseUrl]);
+    
 
-    return (
-        <div>
-           {
-            data.map( city => <CityCard data={city} /> )
-           }
+    console.log(data[1])
+    return <div className="row animate__animated animate__fadeIn">
+        {
+            data.map((city, i) => <div className="col-sm-4" key={i}>
+                <div className="card">
+                    <div className="card-body">
+                        <h5 className="card-title">
+                            { city.city ? city.city : 'GENERAL' }
+                        </h5>
+                        <p className="card-text">
+                            This station is on { city.state }
+                        </p>
 
-           
-        </div>
-    )
+                        <Link to={`/solar/${city.id}`} className='btn btn-primary'>See information</Link>
+                    </div>
+                </div>
+            </div>)
+        }
+        
+    </div>
 }
