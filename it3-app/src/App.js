@@ -11,22 +11,23 @@ import { Solar } from './components/Solar';
 import { Wind } from './components/Wind';
 
 export const App = () => {
-  return <Router>
+    return <Router>
 
-    <Navbar />
-    <Switch>
+      <Navbar />
+      <Switch>
 
-      <div className="container mt-4">
-        <Route exact path='/' component={ MainPage } />
-        <Route path='/wind' component={Wind} />
-        <Route path='/geo' component={Geo} />
-        <Route path='/hydro' component={Hydro} />
-        <Route path='/solar' component={Solar} />
+        <div className="container mt-4">
+          <Route exact path='/' component={ MainPage } />
+          <Route path='/wind' component={Wind} />
+          <Route path='/geo' component={Geo} />
+          <Route path='/hydro' component={Hydro} />
+          <Route path='/solar' component={Solar} />
 
-      </div>
+        </div>
 
 
-    </Switch>
-  </Router>
+      </Switch>
+    </Router>
+  
 }
 
