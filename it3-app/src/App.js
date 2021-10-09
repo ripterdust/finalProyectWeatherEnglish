@@ -15,17 +15,13 @@ export const App = () => {
 
       <Navbar />
       <Switch>
-
         <div className="container mt-4">
           <Route exact path='/' component={ MainPage } />
           <Route path='/wind' component={Wind} />
           <Route path='/geo' component={Geo} />
           <Route path='/hydro' component={Hydro} />
           <Route path='/solar' component={Solar} />
-
         </div>
-
-
       </Switch>
     </Router>
   
