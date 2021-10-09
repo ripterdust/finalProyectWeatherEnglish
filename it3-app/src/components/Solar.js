@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { apiData } from '../apiData';
+import { CityCard } from './CityCard';
 
 export const Solar = () => {
 
-    const [data, setData] = useState({});
+    const [data, setData] = useState([]);
 
     const {key, baseUrl} = apiData;
 
@@ -21,10 +22,13 @@ export const Solar = () => {
             });
     }, [key, baseUrl]);
 
-    console.log(data)
     return (
         <div>
-            Solar
+           {
+            data.map( city => <CityCard /> )
+           }
+
+           
         </div>
     )
 }
