@@ -19,9 +19,10 @@ export const App = () => {
       <div className="container mt-4">
         <Route exact path='/' component={ MainPage } />
         <Route path='/wind' component={Wind} />
-        <Route path="/geo" component={Geo} />
-        <Route paht="/hydro" component={Hydro} />
-        <Route paht="/solar" component={Solar} />
+        <Route path='/geo' component={Geo} />
+        <Route path='/hydro' component={Hydro} />
+        <Route path='/solar' component={Solar} />
+
       </div>
 
 
