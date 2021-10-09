@@ -1,7 +1,8 @@
 import { 
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 import { MainPage } from './components/MainPage';
 import { Navbar } from './components/Navbar';
@@ -13,6 +14,9 @@ export const App = () => {
     <Navbar />
     <Switch>
       <Route exact path='/' component={ MainPage } />
+
+
+      <Redirect to='/'></Redirect>
     </Switch>
   </Router>
 }
