@@ -13,10 +13,13 @@ export const App = () => {
 
     <Navbar />
     <Switch>
-      <Route exact path='/' component={ MainPage } />
+
+      <div className="container mt-4">
+        <Route exact path='/' component={ MainPage } />
+        
+      </div>
 
 
-      <Redirect to='/'></Redirect>
     </Switch>
   </Router>
 }
