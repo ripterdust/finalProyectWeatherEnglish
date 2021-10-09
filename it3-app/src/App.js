@@ -7,8 +7,8 @@ import { Geo } from './components/Geo';
 import { Hydro } from './components/Hydro';
 import { MainPage } from './components/MainPage';
 import { Navbar } from './components/Navbar';
-import { Solar } from './components/Solar';
 import { Wind } from './components/Wind';
+import { SolarRouter } from './routers/SolarRouter';
 
 export const App = () => {
     return <Router>
@@ -20,7 +20,7 @@ export const App = () => {
             <Route path='/wind' component={Wind} />
             <Route path='/geo' component={Geo} />
             <Route path='/hydro' component={Hydro} />
-            <Route path='/solar' component={Solar} />
+            <Route path='/solar' component={SolarRouter} />
         </Switch>
       </div>
     </Router>
