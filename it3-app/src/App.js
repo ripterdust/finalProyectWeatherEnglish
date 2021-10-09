@@ -1,8 +1,7 @@
 import { 
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from 'react-router-dom';
 import { Geo } from './components/Geo';
 import { Hydro } from './components/Hydro';
