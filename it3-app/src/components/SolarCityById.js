@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { apiData } from '../apiData';
+import { AcMonthly } from './solarCharts/AcMonthly';
 
 export const SolarCityById = () => {
 
@@ -21,7 +22,7 @@ export const SolarCityById = () => {
 
     console.log(data)
 
-
+    
     return <div className="animate__animated animate__fadeIn">
         <div className="card container">
             <div className="card-body">
@@ -29,6 +30,9 @@ export const SolarCityById = () => {
                     { data.station_info?.city ? data.station_info?.city : 'GENERAL' }
                 </h6>
 
+                <p></p>
+
+                <AcMonthly />
             </div>
         </div>
     </div>
