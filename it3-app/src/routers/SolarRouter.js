@@ -6,6 +6,7 @@ import { SolarCityById } from "../components/SolarCityById";
 export const SolarRouter = () => {
     return <Switch>
         <Route exact path='/solar' component={Solar} />
-        <Route path='/:id' component={SolarCityById} /> 
+        <Route path='/solar/:id' component={SolarCityById} /> 
+        <Redirect to='/solar'></Redirect>
     </Switch>
 }

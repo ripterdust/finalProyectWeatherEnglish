@@ -20,9 +20,6 @@ export const Solar = () => {
                 setData(all_stations);
             });
     }, [key, baseUrl]);
-    
-
-    console.log(data[1])
     return <div className="row animate__animated animate__fadeIn">
         {
             data.map((city, i) => <div className="col-sm-4" key={i}>
