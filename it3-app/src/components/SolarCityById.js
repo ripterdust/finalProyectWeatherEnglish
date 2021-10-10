@@ -20,17 +20,16 @@ export const SolarCityById = () => {
             });
     }, [URL]);
 
+    let { station_info, outputs } = data;
     console.log(data)
-
-    
-    return <div className="animate__animated animate__fadeIn">
+    return <div className="animate__animated animate__fadeInUp">
         <div className="card container">
             <div className="card-body">
                 <h6 className="card-title text-center fs-1">
-                    { data.station_info?.city ? data.station_info?.city : 'GENERAL' }
+                    { station_info?.city ? station_info?.city : 'GENERAL' }
                 </h6>
 
-                <p></p>
+                <p className="text-center">Ac Annual: { outputs?.ac_annual}</p>
 
                 <AcMonthly />
             </div>
