@@ -23,7 +23,7 @@ export const SolarCityById = () => {
     let { station_info, outputs } = data;
     console.log(data)
     return <div className="animate__animated animate__fadeInUp">
-        <div className="card container">
+        <div className="container">
             <div className="card-body">
                 <h6 className="card-title text-center fs-1">
                     { station_info?.city ? station_info?.city : 'GENERAL' }
@@ -31,7 +31,7 @@ export const SolarCityById = () => {
 
                 <p className="text-center">Ac Annual: { outputs?.ac_annual}</p>
 
-                <AcMonthly />
+                <AcMonthly data={ outputs?.ac_monthly } />
             </div>
         </div>
     </div>
