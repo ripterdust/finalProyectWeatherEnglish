@@ -19,8 +19,17 @@ export const SolarCityById = () => {
             });
     }, [URL]);
 
+    console.log(data)
+
 
     return <div className="animate__animated animate__fadeIn">
-        El id es: {URL}
+        <div className="card container">
+            <div className="card-body">
+                <h6 className="card-title text-center fs-1">
+                    { data.station_info?.city ? data.station_info?.city : 'GENERAL' }
+                </h6>
+
+            </div>
+        </div>
     </div>
 }
