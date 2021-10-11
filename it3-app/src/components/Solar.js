@@ -42,3 +42,4 @@ export const Solar = () => {
     </div>
     </div>
 }
+//END
