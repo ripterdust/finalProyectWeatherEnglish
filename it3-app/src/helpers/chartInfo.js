@@ -1,6 +1,5 @@
-export const chartInfo = ({info}) => {
+export const chartInfo = (info, label) => {
 
-    console.log(info)
     const labels = [
         'January',
         'February',
@@ -17,18 +16,11 @@ export const chartInfo = ({info}) => {
         
     ];
 
-    var infoToReturn = [];
-
-    if(info === undefined){
-        infoToReturn = [1,2,3,4,5,6,7,8,9,1,3,5];
-    }else{
-        infoToReturn = info;
-    }
 
     const data = {
-        labels: labels,
+        labels,
         datasets: [{
-            label: 'Ac monthly',
+            label,
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
@@ -57,7 +49,7 @@ export const chartInfo = ({info}) => {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            data: infoToReturn,
+            data: info,
         }]
     };
 
