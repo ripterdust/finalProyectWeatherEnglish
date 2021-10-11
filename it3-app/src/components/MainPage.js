@@ -11,8 +11,8 @@ export const MainPage = () => {
                     <div className="container mb-2">
                         <div className="card container">
                             <div className="card-body">
-                                <h5 className="card-title">Energy Type</h5>
-                                <p className="card-text">Track "energy type"</p>
+                                <h5 className="card-title">Solar energy</h5>
+                                <p className="card-text">Track solar energy production</p>
                                 <Link className="btn btn-outline-primary" to="/solar">See more.</Link>
                             </div>
                         </div>
@@ -24,9 +24,9 @@ export const MainPage = () => {
                     <div className="container mb-2">
                         <div className="card container">
                             <div className="card-body">
-                                <h5 className="card-title">Energy Type</h5>
-                                <p className="card-text">Track "energy type"</p>
-                                <Link className="btn btn-outline-primary" to="/solar">See more.</Link>
+                                <h5 className="card-title">Geothermical</h5>
+                                <p className="card-text">Track geothermical energy production</p>
+                                <Link className="btn btn-outline-primary" to="/geo">See more.</Link>
                             </div>
                         </div>
                     </div>
@@ -37,9 +37,9 @@ export const MainPage = () => {
                     <div className="container mb-2">
                         <div className="card container">
                             <div className="card-body">
-                                <h5 className="card-title">Energy Type</h5>
-                                <p className="card-text">Track "energy type"</p>
-                                <Link className="btn btn-outline-primary" to="/solar">See more.</Link>
+                                <h5 className="card-title">Wind energy</h5>
+                                <p className="card-text">Track wind energy production.</p>
+                                <Link className="btn btn-outline-primary" to="/wind">See more.</Link>
                             </div>
                         </div>
                     </div>
@@ -50,9 +50,9 @@ export const MainPage = () => {
                     <div className="container mb-2">
                         <div className="card container">
                             <div className="card-body">
-                                <h5 className="card-title">Energy Type</h5>
-                                <p className="card-text">Track "energy type"</p>
-                                <Link className="btn btn-outline-primary" to="/solar">See more.</Link>
+                                <h5 className="card-title">Hydroelectrical.</h5>
+                                <p className="card-text">Track hydroelectrical energy production.</p>
+                                <Link className="btn btn-outline-primary" to="/hydro">See more.</Link>
                             </div>
                         </div>
                     </div>
