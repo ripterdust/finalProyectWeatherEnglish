@@ -12,6 +12,7 @@ export const SolarCityById = () => {
     const URL = `${baseUrl}pvwatts/v5.json?api_key=${key}&file_id=${id}&azimuth=1&system_capacity=4&tilt=1&array_type=1&module_type=1&losses=1`;
     let { data } = useFetch(URL);
 
+    console.table(data?.outputs)
     return <div className="animate__animated animate__fadeInUp">
         <div className="container">
             <div className="card-body">
