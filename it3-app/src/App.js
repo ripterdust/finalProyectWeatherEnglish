@@ -14,7 +14,7 @@ export const App = () => {
     return <Router>
 
       <Navbar />
-      <div className="container mt-4">
+     
         <Switch>
             <Route exact path='/' component={ MainPage } />
             <Route path='/wind' component={Wind} />
@@ -22,7 +22,7 @@ export const App = () => {
             <Route path='/hydro' component={Hydro} />
             <Route path='/solar' component={SolarRouter} />
         </Switch>
-      </div>
+      
     </Router>
   
 }
