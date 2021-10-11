@@ -20,7 +20,8 @@ export const Solar = () => {
                 setData(all_stations);
             });
     }, [key, baseUrl]);
-    return <div className="row animate__animated animate__fadeInUp">
+    return  <div className="container mt-4">
+    <div className="row animate__animated animate__fadeInUp">
         {
             data.map((city, i) => <div className="col-sm-4" key={i}>
                 <div className="card">
@@ -38,5 +39,6 @@ export const Solar = () => {
             </div>)
         }
         
+    </div>
     </div>
 }
