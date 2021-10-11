@@ -20,7 +20,7 @@ export const Solar = () => {
                 setData(all_stations);
             });
     }, [key, baseUrl]);
-    return  <div className="container mt-4">
+    return <div className="container mt-4 ">
     <div className="row animate__animated animate__fadeInUp">
         {
             data.map((city, i) => <div className="col-sm-4" key={i}>
@@ -33,7 +33,7 @@ export const Solar = () => {
                             This station is on { city.state }
                         </p>
 
-                        <Link to={`/solar/${city.id}`} className='btn btn-primary'>See information</Link>
+                        <Link to={`/solar/${city.id}`} className='btn btn-danger'>See information</Link>
                     </div>
                 </div>
             </div>)
