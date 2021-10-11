@@ -7,13 +7,17 @@ export const AcMonthly = ({ Data }) => {
     let { ac_monthly } = outputs;
 
     let data = chartInfo(ac_monthly, 'Ac Montly')
-    return <div>
+    return <div className="mb-4">
+
+        <p className="text-center">
+            
+        </p>
         <Bar
             data={data}
-            height={400}
+            height={200}
             width={600}
             options={{
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 responsive: true
             }}
         />

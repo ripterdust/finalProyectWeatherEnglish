@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { apiData } from '../apiData';
 import { useFetch } from '../hooks/useFetch';
 import { AcMonthly } from './solarCharts/AcMonthly';
+import { DcMonthly } from './solarCharts/DcMonthly';
 
 export const SolarCityById = () => {
 
@@ -12,7 +13,6 @@ export const SolarCityById = () => {
     const URL = `${baseUrl}pvwatts/v5.json?api_key=${key}&file_id=${id}&azimuth=1&system_capacity=4&tilt=1&array_type=1&module_type=1&losses=1`;
     let { data } = useFetch(URL);
 
-    console.table(data?.outputs)
     return <div className="animate__animated animate__fadeInUp">
         <div className="container">
             <div className="card-body">
@@ -23,6 +23,8 @@ export const SolarCityById = () => {
                 <p className="text-center">Ac Annual: { data?.outputs?.ac_annual }</p>
 
                 {(data === null) ? 'No data' : <AcMonthly Data={data} />   }
+
+                {(data === null) ? 'No data' : <DcMonthly Data={data} />   }
 
             </div>
         </div>
