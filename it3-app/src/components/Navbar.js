@@ -16,15 +16,6 @@ export const Navbar = () => {
                     <li className="nav-item">
                         <NavLink activeClassName="active" className="nav-link" to="/solar">Solar</NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink activeClassName="active" className="nav-link" to="/geo">Geothermal</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink activeClassName="active" className="nav-link" to="/wind">Wind</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink activeClassName="active" className="nav-link" to="/hydro">Hydroelectric</NavLink>
-                    </li>
                 </ul>
             </div>
         </div>
